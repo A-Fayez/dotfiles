@@ -1,0 +1,12 @@
+#!/bin/bash
+# a seperate module for installin shell-specific configs
+
+# bash
+for file in "$HOME/dotfiles/shells/bash"/*; do
+    ln -svf "$file" "$HOME"
+done
+
+# zsh
+for file in "$HOME/dotfiles/shells/zsh"/*; do
+    ln -svf "$file" "$HOME"
+done

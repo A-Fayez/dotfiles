@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# gets custom zsh completions from 
+# https://github.com/zsh-users/zsh-completions/
+# Usage: add_completion <completion_plugin_name>
+add_zsh_completion() {
+    local zdir_comp="$HOME/dotfiles/shells/zsh/completions"
+    if [ -z $1 ]
+    then
+        echo "No argument supplied"
+        exit 1
+    fi
+
+    curl -sfSL https://raw.githubusercontent.com/zsh-users/zsh-completions/master/src/_$1 > "$zdir_comp"_$1
+
+    if [ $? -ne 0 ]; then
+        echo "No such completion file or name"
+        rm -f "$zdir_comp"_$1
+    else
+        echo "Added _$1 succussfully to $zdir_comp"
+    fi
+}

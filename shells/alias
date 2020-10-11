@@ -1,0 +1,23 @@
+#!/bin/bash
+
+alias vim=nvim
+alias v=nvim
+alias python=python3
+alias pip=pip3
+alias mv="mv -i"
+alias pg="ping www.google.com"
+
+alias gs="git status"
+alias gm="git commit -m"
+
+alias compose="docker-compose"
+
+alias containers="docker containr ls -a"
+alias volumes="docker volume ls"
+alias images="docker images"
+
+alias cfgalacritty="vim ~/dotfiles/config/alacritty/alacritty.yml"
+alias vimrc="vim ~/dotfiles/config/nvim/init.vim"
+alias i3config="vim ~/dotfiles/config/i3/config"
+
+alias ym='youtube-dl --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"'

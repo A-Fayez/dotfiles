@@ -1,0 +1,52 @@
+# Colors (Base16 Default Dark)
+font:
+  size: 11
+  normal:
+    family: Consolas 
+    style: Regular
+
+colors:
+  # Default colors
+  primary:
+    background: '#000000'
+    foreground: '#d8d8d8'
+
+    #cursor:
+      #text: CellBackground
+      #cursor: '#000000'
+
+  cursor:
+      text: '#000000'
+      cursor: '#d8d8d8'
+
+  # Normal colors
+  normal:
+    black:   '#181818'
+    red:     '#ab4642'
+    green:   '#6ccc9c'
+    yellow:  '#f7ca88'
+    blue:    '#7cafc2'
+    magenta: '#ba8baf'
+    cyan:    '#86c1b9'
+    white:   '#d8d8d8'
+
+  # Bright colors
+  bright:
+    black:   '#585858'
+    red:     '#ab4642'
+    green:   '#a1b56c'
+    yellow:  '#f7ca88'
+    blue:    '#7cafc2'
+    magenta: '#ba8baf'
+    cyan:    '#86c1b9'
+    white:   '#f8f8f8'
+
+  dim:
+    black:   '#131415'
+    red:     '#864343'
+    green:   '#777c44'
+    yellow:  '#9e824c'
+    blue:    '#556a7d'
+    magenta: '#75617b'
+    cyan:    '#5b7d78'
+    white:   '#828482'
