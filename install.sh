@@ -18,6 +18,7 @@ done
 
 # out-of-xdg confings
 ln -svf "$HOME/dotfiles/.tmux.conf" "$HOME"
+ln -svf "$HOME/dotfiles/.xinitrc" "$HOME"
 
 tmux source-file ~/.tmux.conf
 source ~/.zshrc

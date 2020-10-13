@@ -1,4 +1,10 @@
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#444444'
+local syntax=/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+local suggestions=/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+if [ -f "$syntax" ] && [ -f "$suggestions" ]; then
+    source "$syntax"
+    source "$suggestions"
+fi
 
 #  start tmux if we're not in a tmux session
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ] && [[ ! "$TERM" =~ xterm-kitty ]]; then

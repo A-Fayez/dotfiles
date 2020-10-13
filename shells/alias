@@ -1,23 +1,27 @@
 #!/bin/bash
-
+# basics
 alias vim=nvim
 alias v=nvim
 alias python=python3
 alias pip=pip3
 alias mv="mv -i"
 alias pg="ping www.google.com"
-
+# git
 alias gs="git status"
 alias gm="git commit -m"
 
+# docker and k8s and infrastructure tools
 alias compose="docker-compose"
-
 alias containers="docker containr ls -a"
 alias volumes="docker volume ls"
 alias images="docker images"
 
+#dotfiles
 alias cfgalacritty="vim ~/dotfiles/config/alacritty/alacritty.yml"
 alias vimrc="vim ~/dotfiles/config/nvim/init.vim"
 alias i3config="vim ~/dotfiles/config/i3/config"
 
+# tools and utils
 alias ym='youtube-dl --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"'
+alias cat=/usr/bin/bat
+alias ls=/usr/bin/exa
