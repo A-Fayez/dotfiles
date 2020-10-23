@@ -1,0 +1,21 @@
+set previewer ~/.config/lf/preview
+
+set drawbox true
+set icons true
+set shellopts '-eu'
+
+cmd open ${{
+    case $(file --mime-type "$f" -bL) in
+        application/pdf) zathura "$f";;
+        *) xdg-open "$f" ;;
+    esac
+}}
+
+# Mappings
+map p paste
+map x cut
+map y copy
+map <enter> open
+
+map gm cd ~/Music
+map . set hidden!

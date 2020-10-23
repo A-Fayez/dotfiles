@@ -33,6 +33,7 @@ bindsym $mod+q kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id rofi -show run
 bindsym $mod+w exec --no-startup-id chromium
+bindsym $mod+b exec --no-startup-id alacritty -e lf
 bindsym $mod+m move workspace to output left
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -99,6 +100,9 @@ bindsym $mod+minus scratchpad show
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
+
+exec --no-startup-id i3-msg 'workspace $ws5; exec alacritty -e lf'
+
 set $ws1 "1: Chromium" 
 set $ws2 "2: Code"
 set $ws3 "3: Terminals"
@@ -125,6 +129,7 @@ bindsym $mod+0 workspace number $ws10
 # Assign Workspaces:
 assign [class="Chromium"] $ws1
 assign [class="Code"] $ws2
+assign [class="Zathura"] $ws7
 assign [class="mpv"] $ws8
 assign [class="discord"] $ws9
 
