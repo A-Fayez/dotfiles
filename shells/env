@@ -28,6 +28,7 @@ pathappend /mnt/hdd/npm/npm-global/bin PATH
 pathappend /usr/local/go/bin PATH
 pathappend "$HOME"/go/bin PATH
 pathappend "$HOME"/.cargo/bin PATH
+pathappend "$HOME"/.local/bin PATH
 
 pathappend "$HOME/dotfiles/bin" PATH
 pathappend "$HOME/.emacs.d/bin" PATH

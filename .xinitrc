@@ -34,6 +34,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+DISPLAY=":0" nm-applet &
+DISPLAY=":0" blueman-applet &
 setxkbmap -model pc105 -layout us,ara -option grp:alt_shift_toggle
 DISPLAY=":0" picom -b &
 exec i3
