@@ -19,12 +19,12 @@ local on_attach = function(client)
   vim.fn.nvim_set_keymap("n", "gW", "<cmd>lua vim.lsp.buf.workspace_symbol()<CR>", {noremap = true, silent = true})
 end
 
-require'nvim_lsp'.rust_analyzer.setup({
+require'lspconfig'.rust_analyzer.setup({
   on_attach = on_attach,
   capabilities = lsp_status.capabilities
 })
 
-require'nvim_lsp'.pyls.setup({
+require'lspconfig'.pyls.setup({
   on_attach = on_attach,
   capabilities = lsp_status.capabilities,
   settings = {

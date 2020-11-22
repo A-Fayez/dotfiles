@@ -35,7 +35,7 @@ Plug 'tpope/vim-fugitive'
 
 " ui
 Plug 'scrooloose/nerdtree'
-Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline', {'branch': 'master'}
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dense-analysis/ale'
 " Themes
@@ -116,7 +116,7 @@ let g:diagnostic_enable_virtual_text = 1
 let g:diagnostic_trimmed_virtual_text = '40'
 set signcolumn=yes
 set updatetime=300
-autocmd CursorHold * lua vim.lsp.util.show_line_diagnostics()
+"autocmd CursorHold * lua vim.lsp.util.show_line_diagnostics()
 " Goto previous/next diagnostic warning/error
 
 lua require("lsp")
@@ -159,8 +159,7 @@ nnoremap <leader>grom :Git rebase origin/master<CR>
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 
 " Enable type inlay hints
-autocmd InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *
-\ lua require'lsp_extensions'.inlay_hints{ prefix = '> ', highlight = "Comment" }
+autocmd BufEnter,BufWinEnter,TabEnter *.rs :lua require'lsp_extensions'.inlay_hints{}
 
 autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 40})
 " Automaticaly close nvim if NERDTree is only thing left open
