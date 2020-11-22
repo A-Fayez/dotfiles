@@ -1,10 +1,8 @@
 local lsp_status = require('lsp-status')
-local diagnostic = require('diagnostic')
 local completion = require('completion')
 
 local on_attach = function(client)
   completion.on_attach(client)
-  diagnostic.on_attach(client)
   lsp_status.on_attach(client)
 
   vim.api.nvim_command('autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 500)')
@@ -19,12 +17,12 @@ local on_attach = function(client)
   vim.fn.nvim_set_keymap("n", "gW", "<cmd>lua vim.lsp.buf.workspace_symbol()<CR>", {noremap = true, silent = true})
 end
 
-require'nvim_lsp'.rust_analyzer.setup({
+require'lspconfig'.rust_analyzer.setup({
   on_attach = on_attach,
   capabilities = lsp_status.capabilities
 })
 
-require'nvim_lsp'.pyls.setup({
+require'lspconfig'.pyls.setup({
   on_attach = on_attach,
   capabilities = lsp_status.capabilities,
   settings = {
