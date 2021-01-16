@@ -17,6 +17,7 @@ export EDITOR=nvim
 export VISUAL="nvim"
 export PAGER=less
 export DOOMDIR="~/.config/doom"
+export LC_ALL="C"
 
 
 if type rg &> /dev/null; then

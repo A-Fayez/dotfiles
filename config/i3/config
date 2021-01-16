@@ -128,7 +128,7 @@ bindsym $mod+0 workspace number $ws10
 
 # Assign Workspaces:
 assign [class="Chromium"] $ws1
-assign [class="Code"] $ws2
+assign [class="code-oss"] $ws2
 assign [class="Zathura"] $ws7
 assign [class="mpv"] $ws8
 assign [class="discord"] $ws9

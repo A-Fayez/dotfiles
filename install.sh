@@ -23,5 +23,5 @@ ln -svf "$HOME/dotfiles/.xinitrc" "$HOME"
 tmux source-file ~/.tmux.conf
 source ~/.zshrc
 
-echo "Done!"
 
+echo "Done!"
