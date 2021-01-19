@@ -38,5 +38,4 @@ DISPLAY=":0" nm-applet &
 DISPLAY=":0" blueman-applet &
 setxkbmap -model pc105 -layout us,ara -option grp:alt_shift_toggle
 DISPLAY=":0" picom -b &
-DISPLAY=":0" $HOME/.config/polybar/i3listen.py &
 exec i3

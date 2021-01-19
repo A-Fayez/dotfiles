@@ -6,7 +6,9 @@ if [ -f "$syntax" ] && [ -f "$suggestions" ]; then
     source "$suggestions"
 fi
 
+source "$HOME/dotfiles/shells/alias"
+
 #  start tmux if we're not in a tmux session
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ] && [[ ! "$TERM" =~ xterm-kitty ]]; then
-    exec tmux 
+   exec tmux 
 fi

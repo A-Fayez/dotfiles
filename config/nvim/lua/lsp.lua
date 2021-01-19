@@ -1,6 +1,9 @@
 local lsp_status = require('lsp-status')
 local completion = require('completion')
 
+lsp_status.register_progress()
+
+
 local on_attach = function(client)
   completion.on_attach(client)
   lsp_status.on_attach(client)

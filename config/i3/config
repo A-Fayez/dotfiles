@@ -128,7 +128,7 @@ bindsym $mod+0 workspace number $ws10
 
 # Assign Workspaces:
 assign [class="Chromium"] $ws1
-assign [class="code-oss"] $ws2
+assign [class="Code"] $ws2
 assign [class="Zathura"] $ws7
 assign [class="mpv"] $ws8
 assign [class="discord"] $ws9
@@ -233,3 +233,4 @@ client.background       #212121
 
 exec_always feh --bg-scale /home/fayez/Pictures/arch-wallpaper.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id dunst 

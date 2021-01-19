@@ -23,5 +23,5 @@ ln -svf "$HOME/dotfiles/.xinitrc" "$HOME"
 tmux source-file ~/.tmux.conf
 source ~/.zshrc
 
-
+nvim --headless +PlugInstall +qa
 echo "Done!"

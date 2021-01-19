@@ -2,9 +2,6 @@
 # basics
 alias vim=nvim
 alias v=nvim
-alias v=nvim
-alias python=python3
-alias pip=pip3
 alias mv="mv -i"
 alias pg="ping www.google.com"
 # git
