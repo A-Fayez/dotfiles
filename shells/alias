@@ -10,7 +10,7 @@ alias gm="git commit -m"
 
 # docker and k8s and infrastructure tools
 alias compose="docker-compose"
-alias containers="docker containr ls -a"
+alias containers="docker container ls -a"
 alias volumes="docker volume ls"
 alias images="docker images"
 

@@ -40,11 +40,12 @@ Plug 'dense-analysis/ale'
 " Themes
 Plug 'chriskempson/base16-vim'
 Plug 'sainnhe/sonokai'
+Plug 'ayu-theme/ayu-vim'
+Plug 'joshdick/onedark.vim'
 
 call plug#end()
 
-let g:sonokai_style = 'maia'
-colorscheme sonokai
+colorscheme ayu
 
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 set splitbelow
@@ -85,7 +86,7 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
 let g:airline#extensions#branch#format = 1
-
+let g:NERDTreeWinPos = "right"
 let NERDTreeShowHidden=1
 
 " Unbind some useless/annoying default key bindings.
@@ -154,6 +155,9 @@ nnoremap <Leader>lg :Commits<CR>
 nnoremap <leader>gf :Git fetch --all<CR>
 nnoremap <leader>grum :Git rebase upstream/master<CR>
 nnoremap <leader>grom :Git rebase origin/master<CR>
+
+nnoremap n nzz
+nnoremap N Nzz
 
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 

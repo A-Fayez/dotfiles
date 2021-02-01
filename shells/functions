@@ -20,3 +20,9 @@ add_zsh_completion() {
         echo "Added _$1 succussfully to $zdir_comp"
     fi
 }
+
+weed() {
+    str=${1?}
+    size=${2:-8}
+    echo $str | sha256sum - | cut -c1-${size}
+}

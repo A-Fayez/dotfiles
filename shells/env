@@ -16,14 +16,18 @@ export TERM=xterm-256color
 export EDITOR=nvim
 export VISUAL="nvim"
 export PAGER=less
-export DOOMDIR="~/.config/doom"
+export DOOMDIR="$HOME/.config/doom"
 export LC_ALL="C"
+export LESS='--mouse --wheel-lines=3 --quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
 
 
 if type rg &> /dev/null; then
   export FZF_DEFAULT_COMMAND='rg --files'
   export FZF_DEFAULT_OPTS='-m --height 50% --border'
 fi
+
+export VAGRANT_HOME="/mnt/hdd/vagrant-home"
+export AWS_PAGER=""
 
 pathappend /mnt/hdd/npm/npm-global/bin PATH
 pathappend /usr/local/go/bin PATH

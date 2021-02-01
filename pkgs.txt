@@ -6,6 +6,7 @@ alsa-lib
 alsa-plugins
 alsa-topology-conf
 alsa-ucm-conf
+ansible
 aom
 arandr
 arc-gtk-theme
@@ -16,9 +17,10 @@ atkmm
 autoconf
 automake
 avahi
-aws-cli
+aws-cli-v2-bin
 base
 bat
+bfg
 binutils
 bison
 bridge-utils
@@ -29,10 +31,11 @@ cairo
 cairomm
 cantarell-fonts
 chromium
-code
+circleci-cli-bin
 colord
 confuse
 containerd
+crda
 dav1d
 dbus-glib
 dconf
@@ -43,6 +46,7 @@ discord
 dnssec-anchors
 docker
 docker-compose
+dunst
 efibootmgr
 efivar
 electron
@@ -54,7 +58,9 @@ ffmpeg
 file
 findutils
 flac
+flameshot
 flex
+flux-bin
 fontconfig
 freeglut
 freetype2
@@ -66,10 +72,12 @@ gdk-pixbuf2
 gettext
 giflib
 git
+git-delta-bin
 glew
 glib-networking
 glibmm
 glu
+gnome-keyring
 gobject-introspection-runtime
 graphite
 grep
@@ -83,11 +91,13 @@ gtk-update-icon-cache
 gtk2
 gtk3
 gtkmm3
+gvfs
 gzip
 harfbuzz
 hdparm
 hicolor-icon-theme
 hidapi
+htop
 http-parser
 i3-wm
 i3blocks
@@ -101,6 +111,7 @@ iw
 jack
 jitterentropy
 json-glib
+k9s
 kubectl
 l-smash
 lame
@@ -223,9 +234,10 @@ mesa-vdpau
 minizip
 msgpack-c
 mtdev
-neovim
+neovim-git
 network-manager-applet
 networkmanager
+nmap
 node-gyp
 nodejs
 noto-fonts
@@ -233,6 +245,8 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 npm
+ntfs-3g
+nvm
 opencore-amr
 openjpeg2
 openssh
@@ -246,6 +260,7 @@ pangomm
 parted
 patch
 pavucontrol
+pcmanfm
 picom
 pixman
 pkgconf
@@ -297,6 +312,7 @@ python-urllib3
 python-websocket-client
 python-yaml
 python-zipp
+rancher-k3d-bin
 rav1e
 re2
 rest
@@ -312,6 +328,8 @@ sdl2
 sed
 semver
 shared-mime-info
+slack-desktop
+smartmontools
 snappy
 sound-theme-freedesktop
 speex
@@ -324,7 +342,9 @@ tdb
 texinfo
 thermald
 tlp
+tmux
 tracker3
+tree-sitter
 ttf-dejavu
 ttf-font-awesome
 ttf-liberation
@@ -335,8 +355,13 @@ upower
 usbmuxd
 usbutils
 v4l-utils
+vagrant
 vid.stab
 vim
+vim-plug
+virtualbox
+virtualbox-host-modules-arch
+visual-studio-code-bin
 vmaf
 vulkan-icd-loader
 vulkan-intel
@@ -409,6 +434,8 @@ xvidcore
 yajl
 yarn
 yay
+zathura
+zathura-pdf-mupdf
 zip
 zita-alsa-pcmi
 zita-resampler

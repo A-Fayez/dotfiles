@@ -34,6 +34,9 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+#hdmi_active=$(xrandr |grep ' connected' |grep 'HDMI' |awk '{print $1}')
+#[[ ! -z "$hdmi_active" ]] && exec ~/.screenlayout/arandr.sh
+
 DISPLAY=":0" nm-applet &
 DISPLAY=":0" blueman-applet &
 setxkbmap -model pc105 -layout us,ara -option grp:alt_shift_toggle
