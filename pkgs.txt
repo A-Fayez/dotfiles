@@ -46,6 +46,7 @@ discord
 dnssec-anchors
 docker
 docker-compose
+doctl
 dunst
 efibootmgr
 efivar
@@ -58,6 +59,7 @@ ffmpeg
 file
 findutils
 flac
+flake8
 flameshot
 flex
 flux-bin
@@ -78,6 +80,7 @@ glib-networking
 glibmm
 glu
 gnome-keyring
+gnu-netcat
 gobject-introspection-runtime
 graphite
 grep
@@ -110,6 +113,7 @@ iso-codes
 iw
 jack
 jitterentropy
+jq
 json-glib
 k9s
 kubectl
@@ -235,6 +239,7 @@ minizip
 msgpack-c
 mtdev
 neovim-git
+net-tools
 network-manager-applet
 networkmanager
 nmap
@@ -265,8 +270,10 @@ picom
 pixman
 pkgconf
 polybar
+postgresql
 pulseaudio
 pulseaudio-alsa
+pulumi
 python
 python-appdirs
 python-asn1crypto
@@ -296,6 +303,7 @@ python-jsonschema
 python-ordered-set
 python-packaging
 python-paramiko
+python-pip
 python-ply
 python-pyasn1
 python-pycparser
@@ -312,9 +320,11 @@ python-urllib3
 python-websocket-client
 python-yaml
 python-zipp
+python38
 rancher-k3d-bin
 rav1e
 re2
+realvnc-vnc-viewer
 rest
 ripgrep
 rng-tools
@@ -328,6 +338,7 @@ sdl2
 sed
 semver
 shared-mime-info
+shellcheck
 slack-desktop
 smartmontools
 snappy
@@ -335,6 +346,7 @@ sound-theme-freedesktop
 speex
 speexdsp
 srt
+sshfs
 startup-notification
 sudo
 sysfsutils
@@ -347,6 +359,8 @@ tracker3
 tree-sitter
 ttf-dejavu
 ttf-font-awesome
+ttf-hack
+ttf-inconsolata
 ttf-liberation
 ttf-monofur
 unibilium

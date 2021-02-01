@@ -1,8 +1,8 @@
 # Colors (Base16 Default Dark)
 font:
-  size: 11
+  size: 13
   normal:
-    family: Consolas 
+    family: Inconsolata
     style: Regular
 
 colors:
@@ -11,9 +11,9 @@ colors:
     background: '#000000'
     foreground: '#d8d8d8'
 
-    #cursor:
-      #text: CellBackground
-      #cursor: '#000000'
+    cursor:
+      text: CellBackground
+      cursor: '#000000'
 
   cursor:
       text: '#000000'
