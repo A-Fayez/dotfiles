@@ -1,9 +1,11 @@
 # Colors (Base16 Default Dark)
+env:
+  TERM: alacritty
 font:
   size: 13
   normal:
     family: Inconsolata
-    style: Regular
+    style: Medium
 
 colors:
   # Default colors
