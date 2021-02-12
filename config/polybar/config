@@ -15,12 +15,12 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
+background = #00000
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
-primary = #ffb52a
+primary = #2ad1ff
 secondary = #e60053
 alert = #bd2c40
 
@@ -48,13 +48,14 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+font-0 = Font Awesome 5 Brands Regular:style=Regular:pixelsize=10
+font-1 = FontAwesome:style=Regular:pixelsize=10
+font-2 = Font Awesome  5 Free Solid:style=Solid:pixelsize=10
+font-3 = Font Awesome 5 Free Regular:style=Regular:pixelsize=10
 
 modules-left = i3
 modules-center = xwindow mpd
-modules-right = polypomo filesystem xbacklight pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = filesystem xbacklight pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 
 tray-position= right
 tray-padding = 2
@@ -82,12 +83,12 @@ label = %title:0:30:...%
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
+;format-prefix-underline = ${colors.secondary}
 
 label-layout = %layout%
-label-layout-underline = ${colors.secondary}
+;label-layout-underline = ${colors.secondary}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
@@ -119,7 +120,8 @@ label-urgent = %index%!
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
-label-empty = %index%
+label-empty = %index%format-underline = #4bffdc
+
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 
@@ -210,9 +212,8 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
 label = %percentage_used%%
 
 [module/wlan]
@@ -221,8 +222,8 @@ interface = wlp3s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
-label-connected = %essid% - %downspeed%  %upspeed%
+;format-connected-underline = #9f78e1
+label-connected = %essid%  %downspeed%   %upspeed%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -242,10 +243,10 @@ type = internal/network
 interface = enp2s0
 interval = 3.0
 
-format-connected-underline = #55aa55
-format-connected-prefix = " "
+;format-connected-underline = #55aa55
+format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip% - %downspeed%  %upspeed%
+label-connected = %local_ip%  %downspeed%   %upspeed%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -263,9 +264,9 @@ date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 🕘
+format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+;format-underline = #0a6cf5
 
 label = %date% %time%
 
@@ -273,7 +274,7 @@ label = %date% %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+label-volume =  %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted = 🔇 muted
@@ -332,14 +333,14 @@ full-at = 98
 
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = #ffb52a
-;label-full = 🔋
+label-full = 
 
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+;format-full-prefix = ""
 format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+;format-full-underline = ${self.format-charging-underline}
 
 ramp-capacity-0 = 🔋
 ramp-capacity-1 = 
@@ -363,8 +364,9 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
 
+format-prefix = " "
 format = <ramp> <label>
-format-underline = #f50a4d
+;format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 

@@ -32,7 +32,7 @@ bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 # p> " 'Q' in normal mode enters Ex mode. You almost never want this.
-bindsym $mod+g exec --no-startup-id "rofi -show run"
+bindsym $mod+d exec --no-startup-id "rofi -show run -theme Pop-Dark"
 bindsym $mod+w exec --no-startup-id chromium
 bindsym $mod+c exec --no-startup-id code
 bindsym $mod+m move workspace to output left
@@ -234,7 +234,8 @@ client.background       #212121
 #    }
 #}
 
-exec_always feh --bg-scale /home/fayez/Pictures/arch-wallpaper.jpg
+exec_always feh --bg-scale ~/Pictures/wallpapers/anime-girl -sunset.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/i3listen.py
 exec --no-startup-id dunst 
 
