@@ -94,8 +94,10 @@ gtk-update-icon-cache
 gtk2
 gtk3
 gtkmm3
+gucharmap
 gvfs
 gzip
+hadolint-bin
 harfbuzz
 hdparm
 hicolor-icon-theme
@@ -225,6 +227,7 @@ linux-firmware
 llvm-libs
 lm_sensors
 lsof
+lua-language-server-git
 luajit
 lxappearance
 lzo
@@ -235,6 +238,7 @@ man-pages
 mesa
 mesa-demos
 mesa-vdpau
+minikube
 minizip
 msgpack-c
 mtdev
@@ -274,6 +278,7 @@ postgresql
 pulseaudio
 pulseaudio-alsa
 pulumi
+pyenv
 python
 python-appdirs
 python-asn1crypto
@@ -300,6 +305,7 @@ python-idna
 python-importlib-metadata
 python-jmespath
 python-jsonschema
+python-language-server
 python-ordered-set
 python-packaging
 python-paramiko
@@ -307,6 +313,7 @@ python-pip
 python-ply
 python-pyasn1
 python-pycparser
+python-pylint
 python-pynacl
 python-pyparsing
 python-pyrsistent
@@ -318,6 +325,7 @@ python-six
 python-texttable
 python-urllib3
 python-websocket-client
+python-wheel
 python-yaml
 python-zipp
 python38
@@ -446,6 +454,7 @@ xorg-xwud
 xorgproto
 xvidcore
 yajl
+yaml-language-server
 yarn
 yay
 zathura

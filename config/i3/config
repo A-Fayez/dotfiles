@@ -21,6 +21,16 @@ set $down j
 set $left h
 set $right l
 
+# gabes
+for_window [class=".*"] border pixel 3
+gaps inner 5 
+gaps outer 5
+
+bindsym $mod+o		gaps outer current plus 5
+bindsym $mod+Shift+o	gaps outer current minus 5
+bindsym $mod+i		gaps outer current plus 5
+bindsym $mod+Shift+i	gaps outer current minus 5
+
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -234,7 +244,7 @@ client.background       #212121
 #    }
 #}
 
-exec_always feh --bg-scale ~/Pictures/wallpapers/anime-girl -sunset.jpg
+exec_always feh --bg-scale ~/Pictures/wallpapers/coffee.png
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id $HOME/.config/polybar/i3listen.py
 exec --no-startup-id dunst 
