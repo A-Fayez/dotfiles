@@ -3,7 +3,7 @@ font:
   size: 13
   normal:
     family: Inconsolata
-    style: Regular
+    style: Bold
 
 colors:
   # Default colors

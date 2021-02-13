@@ -1,4 +1,4 @@
-font pango:monospace 8
+font pango: Inconsolata 10
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -28,8 +28,8 @@ gaps outer 5
 
 bindsym $mod+o		gaps outer current plus 5
 bindsym $mod+Shift+o	gaps outer current minus 5
-bindsym $mod+i		gaps outer current plus 5
-bindsym $mod+Shift+i	gaps outer current minus 5
+bindsym $mod+i		gaps inner current plus 5
+bindsym $mod+Shift+i	gaps inner current minus 5
 
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -244,8 +244,6 @@ client.background       #212121
 #    }
 #}
 
-exec_always feh --bg-scale ~/Pictures/wallpapers/coffee.png
+exec_always feh --bg-scale ~/Pictures/wallpapers/tokyo.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id $HOME/.config/polybar/i3listen.py
 exec --no-startup-id dunst 
-
