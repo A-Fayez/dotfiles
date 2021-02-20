@@ -14,7 +14,14 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
    exec tmux 
 fi
 
-source <(kubectl completion zsh)
+# k8s
+if command -v kubectl &> /dev/null; then
+    source <(kubectl completion zsh)
+fi
+
+if command -v k3d &> /dev/null; then
+    source <(k3d completion zsh)
+fi
 
 function virtual_env_prompt () {
     REPLY=${VIRTUAL_ENV+(${VIRTUAL_ENV:t}) }
