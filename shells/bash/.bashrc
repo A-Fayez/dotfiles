@@ -9,3 +9,7 @@ fi
 if command -v k3d &> /dev/null; then
     source <(k3d completion bash)
 fi
+
+if command -v helm &> /dev/null; then
+    source <(helm completion bash)
+fi

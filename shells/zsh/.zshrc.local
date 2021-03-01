@@ -23,6 +23,9 @@ if command -v k3d &> /dev/null; then
     source <(k3d completion zsh)
 fi
 
+if command -v helm &> /dev/null; then
+    source <(helm completion zsh)
+fi
 function virtual_env_prompt () {
     REPLY=${VIRTUAL_ENV+(${VIRTUAL_ENV:t}) }
 }
