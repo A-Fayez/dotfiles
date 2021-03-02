@@ -329,7 +329,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 type = internal/battery
 battery = BAT1
 adapter = ACAD
-full-at = 98
+full-at = 97
 
 format-charging = <animation-charging> <label-charging>
 ;format-charging-underline = #ffb52a
