@@ -1,5 +1,5 @@
 if has('termguicolors')
-  set termguicolors
+    set termguicolors
 endif
 set tabstop=4
 set autoindent
@@ -42,9 +42,15 @@ Plug 'chriskempson/base16-vim'
 Plug 'sainnhe/sonokai'
 Plug 'ayu-theme/ayu-vim'
 Plug 'joshdick/onedark.vim'
+Plug 'dracula/vim'
 
 call plug#end()
 
+let g:dracula_colorterm = 1
+let g:dracula_italic = 1
+let g:dracula_underline = 1
+let g:dracula_bold = 1
+let ayucolor="dark"
 colorscheme ayu
 
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
@@ -71,6 +77,7 @@ function! LspStatus() abort
   return ''
 endfunction
 
+set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 set statusline+=\ %{LspStatus()}`
 
 " completion-nvim
@@ -80,7 +87,7 @@ let g:completion_enable_snippet = 'UltiSnips'
 "autocmd Filetype python setlocal omnifunc=v:lua.vim.lsp.omnifunc
 
 "diagnostics-nvim
-let g:diagnostic_insert_delay = 1
+let g:diagnostic_insert_delay = 0
 let g:diagnostic_show_sign = 1
 let g:diagnostic_enable_virtual_text = 1
 let g:diagnostic_trimmed_virtual_text = '40'

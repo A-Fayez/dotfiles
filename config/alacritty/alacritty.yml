@@ -1,8 +1,8 @@
 # Colors (Base16 Default Dark)
 font:
-  size: 13
+  size: 11
   normal:
-    family: Inconsolata
+    family: Hack
     style: Regular
 
 colors:
