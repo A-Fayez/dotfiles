@@ -50,15 +50,13 @@ let g:dracula_colorterm = 1
 let g:dracula_italic = 1
 let g:dracula_underline = 1
 let g:dracula_bold = 1
-let ayucolor="dark"
-colorscheme ayu
+colorscheme dracula
 
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 set splitbelow
 " navigate auto-completion window with tab
 " Theme and airline configs
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
 "let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 "let g:airline_powerline_fonts = 1
@@ -97,7 +95,7 @@ set updatetime=300
 " Goto previous/next diagnostic warning/error
 
 lua require("lsp")
-lua require("treesitter")
+"lua require("treesitter")
 
 filetype plugin indent on
 

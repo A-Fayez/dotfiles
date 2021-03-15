@@ -2,8 +2,8 @@
 font:
   size: 11
   normal:
-    family: Hack
-    style: Regular
+    family: Inconsolata
+    style: Semibold
 
 colors:
   # Default colors

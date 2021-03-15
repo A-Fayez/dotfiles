@@ -20,6 +20,7 @@ export PAGER=less
 export DOOMDIR="$HOME/.config/doom"
 export LC_ALL="C"
 export LESS='--mouse --wheel-lines=3 --quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 
 if type rg &> /dev/null; then
