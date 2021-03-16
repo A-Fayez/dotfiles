@@ -69,3 +69,13 @@
   (require 'tree-sitter-langs)
   (global-tree-sitter-mode)
   (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode))
+
+(after! lsp-ui
+  (setq lsp-ui-doc-enable t))
+
+(after! lsp-rust
+  (setq lsp-rust-analyzer-server-display-inlay-hints t
+        lsp-rust-analyzer-display-chaining-hints t
+        lsp-rust-analyzer-display-parameter-hints t
+        lsp-rust-analyzer-call-info-full t
+        lsp-rust-analyzer-diagnostics-enable t))
