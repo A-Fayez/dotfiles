@@ -138,7 +138,7 @@ bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
 # Assign Workspaces:
-assign [class="Chromium"] $ws1
+assign [class="Google-chrome"] $ws1
 assign [class="Code"] $ws2
 assign [class="Pcmanfm"] $ws5
 assign [class="VirtualBox Manager"] $ws6
