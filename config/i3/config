@@ -144,7 +144,6 @@ assign [class="Pcmanfm"] $ws5
 assign [class="VirtualBox Manager"] $ws6
 assign [class="Zathura"] $ws7
 assign [class="mpv"] $ws8
-assign [class="discord"] $ws9
 
 # switch to workspace using Numpad
 bindsym $mod+KP_1 workspace number $ws1
@@ -244,7 +243,7 @@ client.background       #212121
 #    }
 #}
 
-exec_always feh --bg-scale ~/Pictures/wallpapers/tokyo.jpg
+exec_always feh --bg-scale ~/Pictures/wallpapers/coffee.png
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id dunst 
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent

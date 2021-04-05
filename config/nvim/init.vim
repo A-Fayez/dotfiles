@@ -28,6 +28,8 @@ set listchars=tab:▸\ ,extends:❯,precedes:❮,trail:·,nbsp:·
 set nocursorcolumn
 set splitbelow
 set splitright
+set signcolumn=yes
+set colorcolumn=+1
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -39,6 +41,7 @@ Plug 'tjdevries/lsp_extensions.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-commentary'
 
 " ui
 Plug 'scrooloose/nerdtree'
@@ -52,16 +55,18 @@ Plug 'dracula/vim'
 
 call plug#end()
 
+lua require("lsp")
+lua require("treesitter")
+
 let g:buftabline_indicators=1
 let g:buftabline_separators=1
 
 let g:dracula_colorterm = 1
-let g:dracula_italic = 1
 let g:dracula_underline = 1
 let g:dracula_bold = 1
 let g:gruvbox_bold = 1
 set background=dark
-"autocmd vimenter * ++nested colorscheme gruvbox
+" autocmd vimenter * ++nested colorscheme gruvbox
 let g:gruvbox_contrast_dark='hard'
 colorscheme onedark
 
@@ -69,6 +74,8 @@ autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 let g:NERDTreeWinPos = "right"
 let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.git$', 'node_modules']
+
 
 " Unbind some useless/annoying default key bindings.
 nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
@@ -83,8 +90,8 @@ function! LspStatus() abort
   return ''
 endfunction
 
-set statusline=\ \ %{gitbranch#name()}\ ❯
-set statusline+=\ %<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+set statusline=\ \ %{gitbranch#name()}\ ❯\ 
+set statusline+=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 set statusline+=\ %{LspStatus()}`
 
 " completion-nvim
@@ -92,11 +99,7 @@ set completeopt=menuone,noinsert,noselect
 set shortmess+=c
 let g:completion_enable_snippet = 'UltiSnips'
 
-set signcolumn=yes
-set updatetime=300
-
-lua require("lsp")
-"lua require("treesitter")
+set updatetime=500
 
 filetype plugin indent on
 
@@ -120,11 +123,9 @@ nnoremap <C-s> :w<CR>
 inoremap <C-s> <Esc>:w<CR>l
 vnoremap <C-s> <Esc>:w<CR>
 
-" Goto previous/next diagnostic warning/error
-nnoremap <silent> g[ <cmd>lua vim.lsp.diagnostic.goto_prev()<cr>
-nnoremap <silent> g] <cmd>lua vim.lsp.diagnostic.goto_next()<cr>
 "fzf and git
 nnoremap <C-f> :Files<CR> 
+nnoremap <C-p> :Rg<CR> 
 
 nnoremap n nzz
 nnoremap N Nzz

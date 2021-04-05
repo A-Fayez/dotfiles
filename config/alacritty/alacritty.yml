@@ -3,7 +3,7 @@ font:
   size: 14
   normal:
     family: Inconsolata
-    style: Regular
+    style: semibold
 
 colors:
   # Default colors
@@ -23,7 +23,7 @@ colors:
   normal:
     black:   '#181818'
     red:     '#ab4642'
-    green:   '#6ccc9c'
+    green:   '#a1b56c'
     yellow:  '#f7ca88'
     blue:    '#7cafc2'
     magenta: '#ba8baf'

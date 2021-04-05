@@ -33,6 +33,9 @@ height = 18
 radius = 0.0
 fixed-center = false
 
+bottom = false
+
+
 background = ${colors.background}
 foreground = ${colors.foreground}
 
