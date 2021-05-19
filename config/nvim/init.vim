@@ -9,7 +9,6 @@ set nocompatible
 syntax enable
 set shortmess+=I
 set number
-"set relativenumber
 set laststatus=2
 set backspace=indent,eol,start
 set hidden
@@ -49,9 +48,10 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'itchyny/vim-gitbranch'
 Plug 'ap/vim-buftabline'
 " Themes
-Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 Plug 'dracula/vim'
+Plug 'sainnhe/gruvbox-material'
+Plug 'ghifarit53/tokyonight-vim'
 
 call plug#end()
 
@@ -66,9 +66,9 @@ let g:dracula_underline = 1
 let g:dracula_bold = 1
 let g:gruvbox_bold = 1
 set background=dark
-" autocmd vimenter * ++nested colorscheme gruvbox
-let g:gruvbox_contrast_dark='hard'
-colorscheme onedark
+let g:gruvbox_material_background = 'medium'
+let g:dracula_italic = 0
+colorscheme tokyonight
 
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
@@ -96,6 +96,7 @@ set statusline+=\ %{LspStatus()}`
 
 " completion-nvim
 set completeopt=menuone,noinsert,noselect
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 set shortmess+=c
 let g:completion_enable_snippet = 'UltiSnips'
 
@@ -136,4 +137,7 @@ autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 100
 " Automaticaly close nvim if NERDTree is only thing left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd FileType yaml,yml setlocal ts=2 sts=2 sw=2 expandtab
+
+autocmd CursorHold * lua vim.lsp.buf.hover()
+autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()
 

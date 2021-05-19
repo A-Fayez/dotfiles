@@ -41,13 +41,12 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_command('autocmd BufWritePre * lua vim.lsp.buf.formatting_sync(nil, 500)')
   end
 
-  -- Set autocommands conditional on server_capabilities
+-- Set autocommands conditional on server_capabilities
   if client.resolved_capabilities.document_highlight then
     vim.api.nvim_exec([[
-     hi LspReferenceRead cterm=bold gui=bold
-      hi LspReferenceText cterm=bold gui=bold
-      hi LspReferenceWrite cterm=bold gui=bold
-
+      hi LspReferenceRead cterm=bold gui=bold
+      hi LspReferenceText cterm=bold  gui=bold
+      hi LspReferenceWrite cterm=bold  gui=bold
       augroup lsp_document_highlight
         autocmd! * <buffer>
         autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
@@ -55,7 +54,9 @@ local on_attach = function(client, bufnr)
       augroup END
     ]], false)
   end
+
   vim.api.nvim_command('autocmd CursorHold,CursorHoldI,CursorMoved *.rs :lua require\'lsp_extensions\'.inlay_hints{ prefix = " » ", highlight = "Comment", enabled = {"TypeHint", "ChainingHint", "ParameterHint"} }')
+
 end
 
 -- Use a loop to conveniently both setup defined servers 
@@ -79,17 +80,6 @@ require'lspconfig'.jsonls.setup({
 require'lspconfig'.rust_analyzer.setup({
   on_attach = on_attach,
   capabilities = lsp_status.capabilities,
-  settings = {
-    ["rust-analyzer"] = {
-      checkOnSave = { enable = false },
-      procMacro = { enable = true },
-      diagnostics = {
-        enable = true,
-        disabled = {"unresolved-proc-macro"},
-        enableExperimental = true,
-      },
-    }
-  }
 })
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
@@ -99,6 +89,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     update_in_insert = true,
   }
 )
+
 
 require'lspconfig'.pyls.setup({
   on_attach = on_attach,
