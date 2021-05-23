@@ -82,6 +82,36 @@ require'lspconfig'.rust_analyzer.setup({
   capabilities = lsp_status.capabilities,
 })
 
+require'lspconfig'.yamlls.setup({
+    on_attach = on_attach,
+  capabilities = lsp_status.capabilities,
+  settings = {
+      yaml = {
+          customTags = {
+              		"!fn",
+					"!And",
+					"!If",
+					"!Not",
+					"!Equals",
+					"!Or",
+					"!FindInMap sequence",
+					"!Base64",
+					"!Cidr",
+					"!Ref",
+					"!Ref Scalar",
+					"!Sub",
+					"!GetAtt",
+					"!GetAZs",
+					"!ImportValue",
+					"!Select",
+					"!Split",
+					"!Join sequence"
+          }
+      }
+  }
+
+})
+
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     virtual_text = true,

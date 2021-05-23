@@ -47,6 +47,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'itchyny/vim-gitbranch'
 Plug 'ap/vim-buftabline'
+Plug 'thaerkh/vim-indentguides'
+
 " Themes
 Plug 'joshdick/onedark.vim'
 Plug 'dracula/vim'
@@ -132,6 +134,8 @@ nnoremap n nzz
 nnoremap N Nzz
 
 let g:fzf_layout = { 'down': '~40%' }
+let g:indentguides_spacechar = '▏'
+let g:indentguides_tabchar = '▏'
 
 autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 100})
 " Automaticaly close nvim if NERDTree is only thing left open
