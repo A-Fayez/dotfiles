@@ -41,6 +41,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 
 " ui
 Plug 'scrooloose/nerdtree'
@@ -70,7 +71,7 @@ let g:gruvbox_bold = 1
 set background=dark
 let g:gruvbox_material_background = 'medium'
 let g:dracula_italic = 0
-colorscheme tokyonight
+colorscheme dracula
 
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
